@@ -8,9 +8,12 @@ get_header(); ?>
 <article>
     <?php while (have_posts()) : the_post(); ?>
 	<header>
-        <h1><a href="<?php the_permalink() ?>" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
-	    <?php /*  <time datetime="<?php echo get_the_date('c'); ?>" pubdate="pubdate"><?php echo get_the_date('F jS, Y'); ?></time>  */ ?>
-    </header>
+            <h1>
+                <a href="<?php the_permalink() ?>" title="Permanent Link to <?php the_title_attribute(); ?>">
+                    <?php the_title(); ?>
+                </a>
+            </h1>
+	</header>
 	<?php the_content('More'); ?>
     <?php endwhile; ?>
 </article>
