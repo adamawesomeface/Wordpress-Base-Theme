@@ -1,0 +1,15 @@
+/* reset for wordpress general elements  -- Created by Core3Solutions www.core3solutions.com  */
+.alignleft		{float:left; margin-right: 20px; margin-bottom: 20px;}
+.alignright		{float:right; margin-left: 20px; margin-bottom: 20px;}
+.aligncenter	{margin: 0px auto; display:block;}
+strong,b	 		{font-weight: bold;}
+em,i			{font-style: italic;}
+
+/* Comment Form*/
+textarea#comment { display: block; }
+
+/* MapPress */
+.mapp-poweredby { display: none; }
+
+/* Hide Search Button Text */
+#searchsubmit span { display: none; }

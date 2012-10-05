@@ -1,0 +1,97 @@
+@import "bootstrap.less";
+
+/**** BEGIN VARIABLE OVERRIDES ****/
+/** base settings **/
+@baseBgColor: #E4E4E4;
+@baseFontFamily: Verdana;
+@baseFontSize: 14px;
+@baseFontColor: #000;
+@baseLineHeight: 20px;
+
+/****	END VARIABLE OVERRIDES	****/
+
+/****	MIXINS					****/
+.bold {
+        font-weight: bold;
+}
+
+.italic {
+        font-style: italic;
+}
+
+.boldItalic {
+        .bold;
+        .italic;
+}
+
+.underline {
+        text-decoration: underline;
+}
+
+.noUnderline {
+        text-decoration: none;
+}
+
+.block {
+	display: block;
+}
+
+.inlineBlock {
+        display: inline-block;
+        .ie7-inline-block();
+}
+
+.hide {
+        text-indent: -99999em;
+        color: transparent;
+        font-size: 0px;
+}
+
+.spriteIcon, .spriteIcons, .sprite {
+                background: url(../images/sprite-icons.png) no-repeat;
+} 
+
+/****	END MIXINS			****/
+
+
+/* Base Style */
+html,body { 
+	background-color: @baseBgColor; 
+	font-family: @baseFontFamily;
+	font-size: @baseFontSize;
+	color: @textColor;
+	line-height: @baseLineHeight;
+}
+
+/* Fonts */
+.baseFont {
+	font-family: @baseFontFamily;
+}
+
+/* Main Page Style */
+#wrapper { 
+	width: 960px; 
+	margin: 0 auto; 
+}
+
+/* Header */
+.logo {
+        background: url(../images/logo.png) no-repeat;
+        display: block;
+        width: 242px;
+        height: 124px;
+}
+
+/* Navigation */
+#nav { position: relative; list-style: none; z-index: 50; }
+	#nav li { position: relative; float: left; }
+		#nav ul { position: absolute; visibility: hidden; list-style: none; z-index: 110; }
+			#nav ul li { clear: both; }
+		#nav a { display: block; }
+	#nav table { position: absolute; left: 0; border-collapse: collapse; }
+		#nav table table { top: 0 !important; }
+		#nav ul ul { position: absolute; top: 0; }
+	#nav li:hover ul, #nav a:hover ul, #nav :hover ul :hover ul, #nav :hover ul :hover ul :hover ul { visibility: visible; }
+	#nav :hover ul ul, #nav :hover ul :hover ul ul { visibility: hidden; }
+	.menu:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+	
